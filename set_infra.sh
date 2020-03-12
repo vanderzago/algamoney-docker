@@ -1,8 +1,10 @@
 #!/bin/bash
 
-echo Verificando instalacao newman
-echo
+DATA_FORMATADA=$(date +%d/%m/%Y-%H:%M:%S)
+
+echo [${DATA_FORMATADA}] Verificando instalacao newman
 newman -v; res=$?
+echo
 
 if [[ $res -ne 0 ]]
 then
